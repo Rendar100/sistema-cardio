@@ -12,7 +12,6 @@ st.set_page_config(
 # ==========================================
 # BASE DE REGLAS
 # ==========================================
-# Mantenemos la lógica intacta del sistema original
 reglas = [
     {"id": "Regla 1", "descripcion": "Edad>60 + Colesterol Alto + Presión Muy elevada",
      "condicion": lambda h, r_e: r_e==">60" and h['colesterol']=="Alto" and h['presion']=="Muy elevada",
@@ -191,3 +190,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
