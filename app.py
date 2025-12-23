@@ -34,8 +34,8 @@ reglas = [
     {"id": "Regla 7", "descripcion": "Edad<45 + Presión Normal + Colesterol Bajo",
      "condicion": lambda h, r_e: r_e=="<45" and h['presion']=="Normal" and h['colesterol']=="Bajo",
      "nivel": "Bajo"},
-    {"id": "Regla 8", "descripcion": "ECG Anormal + ST 'No lo sé'",
-     "condicion": lambda h, _: h['ecg']=="Anormal" and h['st_ejercicio']=="No lo sé",
+    {"id": "Regla 8", "descripcion": "ECG Normal + ST 'No lo sé'",
+     "condicion": lambda h, _: h['ecg']=="Normal" and h['st_ejercicio']=="No lo sé",
      "nivel": "Medio"},
     {"id": "Regla 9", "descripcion": "Sin angina + Dolor Ausente",
      "condicion": lambda h, _: h['angina']=="No" and h['dolor_pecho']=="Ausente",
@@ -190,4 +190,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
